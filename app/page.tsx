@@ -137,10 +137,10 @@ export default function AgenticPage() {
         <div className="h-20" />
 
         {/* Title + metrics — anchored to bottom left */}
-        <div className="absolute inset-x-0 bottom-0 z-30 flex flex-col px-6 md:px-12 pb-12 max-w-3xl">
+        <div className="absolute inset-x-0 bottom-0 z-30 flex flex-col px-6 md:px-12 pb-12 max-w-5xl">
           {/* Title */}
           <h1
-            className="text-6xl sm:text-7xl md:text-8xl font-light text-[#111] leading-[1.0] tracking-tight mb-10"
+            className="text-5xl sm:text-6xl md:text-7xl font-light text-[#111] leading-[1.05] tracking-tight mb-10"
             style={{
               fontFamily: '"IBM Plex Sans", sans-serif',
               opacity: heroReady ? 1 : 0,
@@ -149,13 +149,13 @@ export default function AgenticPage() {
               transition: "opacity 1s cubic-bezier(0.16,1,0.3,1) 0ms, filter 1s cubic-bezier(0.16,1,0.3,1) 0ms, transform 1s cubic-bezier(0.16,1,0.3,1) 0ms",
             }}
           >
-            Build &amp;<br />orchestrate AI<br />agents while<br />you sleep.
+            Automate your<br className="hidden sm:block" /> customer support<br /> with AI Voice Bots.
           </h1>
 
           {/* 3 metrics — staggered after title */}
           <div className="flex gap-8 sm:gap-12">
             {[
-              { value: "50M+", label: "Tasks" },
+              { value: "50M+", label: "Conversations" },
               { value: "99.9%", label: "Uptime" },
               { value: "180+", label: "Countries" },
             ].map((stat, i) => (
@@ -181,9 +181,9 @@ export default function AgenticPage() {
         <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <PixelIcon type="platform" size={40} />
-            <div className="mt-4"><Tag>PLATFORM</Tag></div>
+            <div className="mt-4"><Tag>ENTERPRISE VOICE</Tag></div>
             <RevealText className="mt-5 text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.05]">
-              {"Everything you need\nto ship agents."}
+              {"A fully managed\nvoice AI workforce."}
             </RevealText>
           </div>
 
@@ -217,9 +217,9 @@ export default function AgenticPage() {
                 <div className="w-10 h-10 rounded-xl border border-black/10 bg-white/60 flex items-center justify-center mb-6" style={{ backdropFilter: "blur(8px)" }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><path d="m4.93 4.93 2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></svg>
                 </div>
-                <h3 className="text-xl font-light mb-3">Visual Agent Builder</h3>
+                <h3 className="text-xl font-light mb-3">Custom Voice Personas</h3>
                 <p className="text-sm text-black/45 leading-relaxed max-w-sm">
-                  Drag, connect, and configure agents through an intuitive graph editor. No boilerplate. Ship in minutes, not days.
+                  We design agents that match your brand's tone, accent, and style. From professional support reps to energetic sales SDRs.
                 </p>
               </div>
             </BentoCard>
@@ -229,8 +229,8 @@ export default function AgenticPage() {
               <div className="w-10 h-10 rounded-xl border border-black/10 flex items-center justify-center mb-5">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
               </div>
-              <h3 className="text-lg font-light mb-2">Real-time Monitoring</h3>
-              <p className="text-sm text-black/45 leading-relaxed">Trace every decision. Debug with full execution history and live logs.</p>
+              <h3 className="text-lg font-light mb-2">Call Analytics</h3>
+              <p className="text-sm text-black/45 leading-relaxed">Get rich insights from every conversation with live transcripts and sentiment analysis.</p>
             </BentoCard>
 
             <BentoCard className="col-span-12 md:col-span-4 p-8 min-h-[200px]" delay={160}>
@@ -245,8 +245,8 @@ export default function AgenticPage() {
               <div className="w-10 h-10 rounded-xl border border-black/10 flex items-center justify-center mb-5">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
-              <h3 className="text-lg font-light mb-2">Guardrails & Permissions</h3>
-              <p className="text-sm text-black/45 leading-relaxed">Define what agents can and cannot do. Fine-grained access control per tool.</p>
+              <h3 className="text-lg font-light mb-2">Brand Safety</h3>
+              <p className="text-sm text-black/45 leading-relaxed">Strict guardrails ensure your agents always stick to the script and never hallucinate.</p>
             </BentoCard>
           </div>
         </div>
@@ -285,10 +285,10 @@ export default function AgenticPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-3" onMouseMove={handleMouse}>
             {[
-              { n: "01", title: "Define",  desc: "Describe your agent in plain language. Set objectives, tools, and boundaries.", delay: 0,   img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/define-5aafAmGBrxZpOqJ3XLHY3n3qzC2I5K.png" },
-              { n: "02", title: "Compose", desc: "Chain agents together in the visual editor. Wire triggers, conditions, and outputs.", delay: 80,  img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/compose-5RT5VR4f1Y3GoFmovqTKLTG4UXp3g2.png" },
-              { n: "03", title: "Test",    desc: "Run sandboxed simulations. Inspect every decision in the execution trace.", delay: 140, img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/test-zm8guZwxJHtwWsJ7XO4B0CF7GzlNK8.png" },
-              { n: "04", title: "Deploy",  desc: "Push globally in one click. Agents auto-scale, self-heal, and report back.", delay: 200, img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/deploy-an8fgHSLzniojkcmRyGGIFQUJF9T5J.png" },
+              { n: "01", title: "Consult",  desc: "We analyze your call flows and determine where AI can drive the most impact.", delay: 0,   img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/define-5aafAmGBrxZpOqJ3XLHY3n3qzC2I5K.png" },
+              { n: "02", title: "Train", desc: "Our team trains your custom agent on your knowledge base and desired personas.", delay: 80,  img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/compose-5RT5VR4f1Y3GoFmovqTKLTG4UXp3g2.png" },
+              { n: "03", title: "Sandbox",    desc: "Test the voice bot in a secure environment and refine responses before launch.", delay: 140, img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/test-zm8guZwxJHtwWsJ7XO4B0CF7GzlNK8.png" },
+              { n: "04", title: "Go Live",  desc: "We deploy the agent and actively monitor performance, continuously optimizing it.", delay: 200, img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/deploy-an8fgHSLzniojkcmRyGGIFQUJF9T5J.png" },
             ].map((step) => (
               <BentoCard key={step.n} className="relative overflow-hidden flex flex-col min-h-[320px]" delay={step.delay}>
                 {/* Image at top — mask fades it out strongly before the bottom edge */}
@@ -356,15 +356,14 @@ export default function AgenticPage() {
                   background: "rgba(255,255,255,0.60)",
                 }}
               >
-                <Tag>SDK</Tag>
-                <h3 className="mt-3 text-lg font-light mb-2">Build custom tools</h3>
-                <p className="text-xs text-black/45 leading-relaxed mb-4">Define any function as a tool your agents can call. TypeScript and Python.</p>
+                <Tag>CRM</Tag>
+                <h3 className="mt-3 text-lg font-light mb-2">Seamless Integrations</h3>
+                <p className="text-xs text-black/45 leading-relaxed mb-4">Connect our voice bots directly to Salesforce, HubSpot, or Zendesk.</p>
                 <div className="bg-black/[0.05] rounded-lg border border-black/[0.07] p-3 font-mono text-[11px] text-black/50 leading-relaxed">
-                  <span className="text-black/25">// tool definition</span><br />
-                  <span className="text-blue-600/70">defineTool</span>{"({"}<br />
-                  {"  "}<span className="text-amber-700/70">name</span>: <span className="text-green-700/70">&apos;fetchPrice&apos;</span>,<br />
-                  {"  "}<span className="text-amber-700/70">run</span>: <span className="text-black/35">async (q) </span>={">"}<br />
-                  {"    "}<span className="text-blue-600/70">api</span>.get(q)<br />
+                  <span className="text-black/25">// CRM sync</span><br />
+                  <span className="text-blue-600/70">syncLead</span>{"({"}<br />
+                  {"  "}<span className="text-amber-700/70">provider</span>: <span className="text-green-700/70">&apos;salesforce&apos;</span>,<br />
+                  {"  "}<span className="text-amber-700/70">data</span>: <span className="text-black/35">call.summary</span><br />
                   {"})"}
                 </div>
               </div>
@@ -469,15 +468,14 @@ export default function AgenticPage() {
         </div>
       </section>
 
-      {/* ── DEVELOPER EXPERIENCE ──────────────────────────────────────────── */}
-      <DevExSection />
+      {/* ── DEVELOPER EXPERIENCE (Removed) ────────────────────────────────── */}
 
       {/* ── MARQUEE CAPABILITIES ──────────────────────────────────────────── */}
       <section className="py-0 border-t border-black/[0.06] overflow-hidden select-none">
         <div className="flex border-b border-black/[0.06]" style={{ animation: "marqueeLeft 28s linear infinite" }}>
           {[...Array(3)].map((_, rep) => (
             <div key={rep} className="flex shrink-0">
-              {["Web Research", "Code Generation", "Email Drafting", "Data Analysis", "PR Reviews", "Scheduling", "SQL Queries", "API Calls", "File Processing", "Monitoring"].map((cap) => (
+              {["Inbound Sales", "Customer Support", "Appointment Booking", "Lead Qualification", "Payment Collection", "Feedback Surveys", "Order Tracking", "Account Verification", "Technical Support", "Outbound Campaigns"].map((cap) => (
                 <div key={cap} className="flex items-center gap-6 px-10 py-5 border-r border-black/[0.06] shrink-0">
                   <span className="w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
                   <span className="text-sm text-black/45 whitespace-nowrap tracking-wide">{cap}</span>
@@ -489,7 +487,7 @@ export default function AgenticPage() {
         <div className="flex" style={{ animation: "marqueeRight 22s linear infinite" }}>
           {[...Array(3)].map((_, rep) => (
             <div key={rep} className="flex shrink-0">
-              {["Report Writing", "Slack Summaries", "Lead Scoring", "Image Tagging", "Test Running", "Deployment", "Log Parsing", "Invoice Processing", "Meeting Notes", "Sentiment Analysis"].map((cap) => (
+              {["24/7 Availability", "Multi-language", "Human Handoff", "Sentiment Analysis", "Call Transcripts", "CRM Integration", "Custom Voice Personas", "HIPAA Compliant", "PCI Compliant", "Zero Latency"].map((cap) => (
                 <div key={cap} className="flex items-center gap-6 px-10 py-5 border-r border-black/[0.06] shrink-0">
                   <span className="w-1.5 h-1.5 rounded-full bg-black/12 shrink-0" />
                   <span className="text-sm text-black/30 whitespace-nowrap tracking-wide">{cap}</span>
@@ -511,7 +509,7 @@ export default function AgenticPage() {
                 {"Agents working\n24 / 7, autonomously."}
               </RevealText>
               <p className="mt-6 text-base text-black/40 leading-relaxed max-w-sm">
-                At any moment, thousands of agents are running tasks on behalf of teams around the world — no human in the loop.
+                At any moment, thousands of our voice agents are speaking with customers around the world — handling support and sales instantly.
               </p>
               <div className="mt-10 flex items-end gap-2">
                 <LiveAgentCounter />
@@ -532,25 +530,24 @@ export default function AgenticPage() {
             <PixelIcon type="pricing" size={40} />
             <div className="mt-4"><Tag>PRICING</Tag></div>
             <RevealText className="mt-5 text-4xl md:text-5xl font-light tracking-tight leading-[1.05]">
-              {"Pay as your agents grow."}
+              {"Scale your support instantly."}
             </RevealText>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3" onMouseMove={handleMouse}>
             {[
               {
-                name: "Sandbox",
-                price: "Free",
-                sub: "Start experimenting",
-                features: ["5 agents", "1,000 tasks/mo", "Community support", "Basic traces"],
+                name: "Pilot",
+                price: "Custom",
+                sub: "Test the waters",
+                features: ["1 custom voice bot", "Up to 5,000 minutes/mo", "Basic analytics", "Standard support"],
                 delay: 0,
               },
               {
-                name: "Builder",
-                price: "$49",
-                period: "/mo",
-                sub: "For teams shipping fast",
-                features: ["50 agents", "100K tasks/mo", "Priority support", "Full traces + replay", "Custom tools", "REST API"],
+                name: "Growth",
+                price: "Custom",
+                sub: "For scaling businesses",
+                features: ["Multiple personas", "Up to 50,000 minutes/mo", "Priority support", "CRM integrations", "Call transcripts", "Human handoff"],
                 highlight: true,
                 delay: 80,
               },
@@ -558,7 +555,7 @@ export default function AgenticPage() {
                 name: "Enterprise",
                 price: "Custom",
                 sub: "For orgs at scale",
-                features: ["Unlimited agents", "Unlimited tasks", "Dedicated infra", "SOC 2 / HIPAA", "SLA guarantees", "Custom contracts"],
+                features: ["Unlimited bots", "Custom volume", "Dedicated infra", "SOC 2 / HIPAA", "SLA guarantees", "Dedicated account manager"],
                 delay: 140,
               },
             ].map((plan) => (
@@ -588,7 +585,7 @@ export default function AgenticPage() {
                     ? "bg-[#111] text-white hover:bg-[#333]"
                     : "border border-black/10 text-black/60 hover:border-black/25 hover:text-black hover:bg-black/[0.04]"
                 }`}>
-                  {plan.name === "Enterprise" ? "CONTACT SALES" : "GET STARTED"}
+                  {plan.name === "Pilot" ? "GET A DEMO" : "CONTACT SALES"}
                 </button>
               </BentoCard>
             ))}
@@ -625,7 +622,7 @@ export default function AgenticPage() {
         />
         <div className="relative z-10 max-w-2xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.05] mb-6">
-            Start building your<br />agent workforce.
+            Start automating your<br />customer calls.
           </h2>
           <p className="text-sm text-black/45 leading-relaxed mb-10">
             Join thousands of teams deploying AI agents that work around the clock, across every timezone.
@@ -668,8 +665,8 @@ export default function AgenticPage() {
           {/* Nav sections */}
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
             {[
-              { label: "Platform",     href: "#platform" },
-              { label: "Agents",       href: "#agents" },
+              { label: "Services",     href: "#platform" },
+              { label: "Showcase",       href: "/agents" },
               { label: "Workflow",     href: "#workflow" },
               { label: "Integrations", href: "#integrations" },
               { label: "Live",         href: "#live" },

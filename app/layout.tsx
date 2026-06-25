@@ -13,21 +13,21 @@ const _courierPrime = Courier_Prime({ weight: ["400", "700"], subsets: ["latin"]
 const _ibmPlexSans = IBM_Plex_Sans({ weight: ["300", "400", "500", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Agentic — Autonomous AI Agents at Scale',
-  description: 'Deploy autonomous AI agents that think, act, and execute across any workflow. Connect 200+ integrations, run agents in parallel, and ship faster with the Agentic platform.',
-  keywords: ['AI agents', 'autonomous agents', 'LLM orchestration', 'AI automation', 'multi-agent platform'],
+  title: 'Agentic — AI Voice Bot Services',
+  description: 'Elevate your business with our AI Voice Bot services. We provide cutting-edge autonomous voice agents to automate your customer support, sales, and operations.',
+  keywords: ['AI voice bots', 'voice agents', 'customer support AI', 'AI automation services', 'AI voice technology'],
   authors: [{ name: 'Agentic' }],
   openGraph: {
-    title: 'Agentic — Autonomous AI Agents at Scale',
-    description: 'Deploy autonomous AI agents that think, act, and execute across any workflow.',
+    title: 'Agentic — AI Voice Bot Services',
+    description: 'Elevate your business with our AI Voice Bot services.',
     type: 'website',
     url: 'https://agentic.ai',
     siteName: 'Agentic',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agentic — Autonomous AI Agents at Scale',
-    description: 'Deploy autonomous AI agents that think, act, and execute across any workflow.',
+    title: 'Agentic — AI Voice Bot Services',
+    description: 'Elevate your business with our AI Voice Bot services.',
   },
   icons: {
     icon: [

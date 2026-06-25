@@ -3,11 +3,11 @@
 import { useState } from "react"
 
 const NAV_LINKS = [
-  { label: "Platform",     href: "#platform" },
-  { label: "Agents",       href: "#agents" },
-  { label: "Workflow",     href: "#workflow" },
-  { label: "Integrations", href: "#integrations" },
-  { label: "Pricing",      href: "#pricing" },
+  { label: "Services",     href: "/#platform" },
+  { label: "Showcase",     href: "/agents" },
+  { label: "Workflow",     href: "/#workflow" },
+  { label: "Integrations", href: "/#integrations" },
+  { label: "Pricing",      href: "/#pricing" },
 ]
 
 const NAV_STYLE = {
@@ -48,7 +48,7 @@ export function MobileNav() {
 
           <div className="flex items-center gap-2">
             <button className="text-[11px] px-4 py-2 rounded-xl border border-black/10 text-black/60 hover:text-black hover:border-black/20 hover:bg-black/[0.03] transition-all duration-200 tracking-wide hidden md:block" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
-              START BUILDING
+              GET A DEMO
             </button>
 
             {/* Burger — mobile only */}
@@ -105,7 +105,7 @@ export function MobileNav() {
             ))}
             <div className="mt-1 px-2 pb-1">
               <button className="w-full text-[11px] px-4 py-2.5 rounded-xl border border-black/10 text-black/60 hover:text-black hover:border-black/20 hover:bg-black/[0.03] transition-all duration-200 tracking-wide" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
-                START BUILDING
+                GET A DEMO
               </button>
             </div>
           </div>
